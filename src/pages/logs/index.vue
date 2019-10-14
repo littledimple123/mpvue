@@ -1,7 +1,6 @@
 <template>
   <div class="container" @click="clickHandle">
     <div class="message">{{msg}}</div>
-    <button class='weui_btn weui_btn_primary'>111</button>
   </div>
 </template>
 

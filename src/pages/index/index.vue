@@ -6,11 +6,11 @@
     <button class='weui-btn' size='mini' type='primary' @click='aaa'>111</button>
     <div class="weui-cells__title">带跳转的列表项</div>
     <div class="weui-cells weui-cells_after-title">
-      <navigator url="./list1/index" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <navigator url="./list1/main" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
         <div class="weui-cell__bd">列表1</div>
         <div class="weui-cell__ft weui-cell__ft_in-access"></div>
       </navigator>
-      <navigator url="./list2/index" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <navigator url="./list2/main" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
         <div class="weui-cell__bd">列表2</div>
         <div class="weui-cell__ft weui-cell__ft_in-access"></div>
       </navigator>
