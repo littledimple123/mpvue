@@ -3,7 +3,7 @@
     <div class="container" @click="clickHandle">
       <div class="message">{{msg}}</div>
     </div>
-    <button class='weui-btn' size='mini' type='primary' @click='aaa'>111</button>
+    <button class='weui-btn' size='mini' type='primary' open-type='getUserInfo' @click='getuserInfo'>获取用户信息</button>
     <div class="weui-cells__title">带跳转的列表项</div>
     <div class="weui-cells weui-cells_after-title">
       <navigator url="./list1/main" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
@@ -18,6 +18,7 @@
   </div>
 </template>
 <script>
+import { gettableDate } from '@/api/detail'
 export default {
   name: 'Index',
   data () {
@@ -25,12 +26,25 @@ export default {
       msg: 'Hello'
     }
   },
+  mounted () {
+    this.aaa()
+  },
   methods: {
+    getuserInfo () {
+      wx.getUserInfo({
+        success: (res) => {
+          console.log(res)
+        },
+        fail: (err) => {
+          console.log(err)
+        }
+      })
+    },
     clickHandle () {
       this.msg = 'Clicked!!!!!!'
     },
     aaa () {
-      console.log('aaa')
+      console.log(gettableDate())
     }
   }
 }
